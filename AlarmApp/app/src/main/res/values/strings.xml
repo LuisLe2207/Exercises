@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CurrentLocation</string>
+    <string name="checkBoxName">Repeat ?</string>
+    <string name="btnSetAlarmName">Set Alarm</string>
+    <string name="alarm_fired_notification_title">Alarm Application</string>
+    <string name="alarm_fired_notification_msg">Wake Up!!!!</string>
+</resources>
