@@ -12,24 +12,103 @@
         android:layout_width="400dp"
         android:layout_height="400dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:rotation="-90"
+        android:indeterminate="false"
         android:progressDrawable="@drawable/circular"
-        />
+        android:background="@drawable/circular_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textEslapsedTime"
+        android:id="@+id/textElapsedTime"
+        android:textSize="80sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/timerProgress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/timerProgress"
         app:layout_constraintTop_toTopOf="@+id/timerProgress" />
 
-    
+    <LinearLayout
+        android:id="@+id/setTimeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/timerProgress"
+        app:layout_constraintEnd_toEndOf="@+id/timerProgress"
+        app:layout_constraintStart_toStartOf="@+id/timerProgress"
+        app:layout_constraintTop_toTopOf="@+id/timerProgress">
+
+        <EditText
+            android:id="@+id/edtHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="80sp"
+            android:maxLength="2"
+            android:hint="@string/hint_hour"
+            android:inputType="number"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="80sp"
+            android:hint="@string/colon_sign"
+            />
+
+        <EditText
+            android:id="@+id/edtMinute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="80sp"
+            android:maxLength="2"
+            android:hint="@string/hint_minute"
+            android:inputType="number"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="80sp"
+            android:hint="@string/colon_sign"
+            />
+
+        <EditText
+            android:id="@+id/edtSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="80sp"
+            android:maxLength="2"
+            android:hint="@string/hint_second"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonStartPause"
+        android:text="@string/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonStop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerProgress" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:text="@string/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonStartPause"
+        app:layout_constraintTop_toBottomOf="@+id/timerProgress" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

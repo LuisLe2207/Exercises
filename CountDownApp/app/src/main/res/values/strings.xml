@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">CountDownApp</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="hint_hour">99</string>
+    <string name="hint_minute">59</string>
+    <string name="hint_second">59</string>
+    <string name="colon_sign">:</string>
+    <string name="invalid_input">Invalid input</string>
+    <string name="timer_finished_notification_title">Countdown App</string>
+    <string name="timer_finished_notification_msg">Finished</string>
 </resources>

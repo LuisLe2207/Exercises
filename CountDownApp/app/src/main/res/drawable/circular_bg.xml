@@ -3,8 +3,8 @@
     android:shape="ring"
     android:innerRadiusRatio="2.3"
     android:thickness="15dp"
-    android:useLevel="true">
+    android:useLevel="false">
 
-    <solid android:color="@color/purple_500"/>
+    <solid android:color="@color/teal_700"/>
 
 </shape>
